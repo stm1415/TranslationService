@@ -16,4 +16,4 @@ def get_db():
 SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(SQLALCHEMY_DATABASE_URL) #engine is responsible for managing the connection pool and database interactions
 
-SessionLocal = sessionmaker(outocommit=False, autoflush=False, bind=engine)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

@@ -10,7 +10,7 @@ class TranslationTask(Base):
     __tablename__ = "translation_tasks"
     id = Column(Integer, primary_key=True, index=True)
     text = Column(Text, nullable=False)
-    languagues = Column(JSON, nullable=False)
+    languages = Column(JSON, nullable=False)
     status = Column(String, default="inProgress")
 
-    translation = Column(JSON, default={})
+    translations = Column(JSON, default={})
